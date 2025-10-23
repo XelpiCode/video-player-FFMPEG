@@ -14,7 +14,6 @@ set(SDL_SHARED OFF CACHE BOOL "Build SDL shared" FORCE)
 set(SDL_STATIC ON  CACHE BOOL "Build SDL static" FORCE)
 
 add_subdirectory("thirdparty/SDL" EXCLUDE_FROM_ALL)
-add_subdirectory("thirdparty/x265/source")
 
 file(GLOB_RECURSE MY_SOURCES CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
 add_executable(FFMPEG_video_player "${MY_SOURCES}")

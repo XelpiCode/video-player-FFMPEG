@@ -1,0 +1,14 @@
+prefix=/c/Code/FFMPEG-video-player/thirdparty/ffmpeg-static-build
+exec_prefix=${prefix}
+libdir=/c/Code/FFMPEG-video-player/thirdparty/ffmpeg-static-build/lib
+includedir=/c/Code/FFMPEG-video-player/thirdparty/ffmpeg-static-build/include
+
+Name: libswresample
+Description: FFmpeg audio resampling library
+Version: 6.2.100
+Requires: libavutil >= 60.13.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lswresample -lm -latomic
+Libs.private: 
+Cflags: -I${includedir}

@@ -1,0 +1,14 @@
+prefix=/c/Code/FFMPEG-video-player/thirdparty/ffmpeg-static-build
+exec_prefix=${prefix}
+libdir=/c/Code/FFMPEG-video-player/thirdparty/ffmpeg-static-build/lib
+includedir=/c/Code/FFMPEG-video-player/thirdparty/ffmpeg-static-build/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 62.16.100
+Requires: libswresample >= 6.2.100, libavutil >= 60.13.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavcodec -liconv -lm -latomic -llzma -lmfuuid -lole32 -lstrmiids -lole32 -luser32 -lz
+Libs.private: 
+Cflags: -I${includedir}
